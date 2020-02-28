@@ -3,6 +3,7 @@ const {pathsToModuleNameMapper} = require('ts-jest/utils')
 module.exports = ({compilerOptions: {paths}}, {name}) => ({
 	preset: 'ts-jest',
 	displayName: name.split('/').pop() || name || 'no name',
+	bail: true, // when running per-project
 	globals: {
 		'ts-jest': {
 			diagnostics: false,
