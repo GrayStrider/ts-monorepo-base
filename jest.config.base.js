@@ -1,6 +1,6 @@
 const {pathsToModuleNameMapper} = require('ts-jest/utils')
 
-const colors = ['green', 'blue', 'magenta', 'cyan']
+const colors = ['blue', 'magenta', 'cyan', 'pink', 'gray']
 module.exports = ({compilerOptions: {paths}}, {name}) => ({
 	preset: 'ts-jest',
 	displayName: {
@@ -9,6 +9,7 @@ module.exports = ({compilerOptions: {paths}}, {name}) => ({
 	},
 	bail: true, // when running per-project
 	errorOnDeprecated: true,
+	notify: true, // ??
 	globals: {
 		'ts-jest': {
 			diagnostics: false,
