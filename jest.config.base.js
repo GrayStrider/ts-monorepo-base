@@ -7,8 +7,8 @@ module.exports = ({compilerOptions: {paths}}, {name}) => ({
 		name: name.split('/').pop() || name || 'no name',
 		color: colors[Math.floor(Math.random() * colors.length)],
 	},
-
 	bail: true, // when running per-project
+	errorOnDeprecated: true,
 	globals: {
 		'ts-jest': {
 			diagnostics: false,
