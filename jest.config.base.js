@@ -1,8 +1,13 @@
 const {pathsToModuleNameMapper} = require('ts-jest/utils')
 
+const colors = ['green', 'blue', 'magenta', 'cyan']
 module.exports = ({compilerOptions: {paths}}, {name}) => ({
 	preset: 'ts-jest',
-	displayName: name.split('/').pop() || name || 'no name',
+	displayName: {
+		name: name.split('/').pop() || name || 'no name',
+		color: colors[Math.floor(Math.random() * colors.length)],
+	},
+
 	bail: true, // when running per-project
 	globals: {
 		'ts-jest': {
