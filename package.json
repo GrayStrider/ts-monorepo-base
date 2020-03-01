@@ -6,7 +6,8 @@
 
   "scripts": {
     "test:all": "jest --forceExit --detectOpenHandles --runInBand",
-    "test:watch": "yarn test:all --watchAll"
+    "test:watch": "yarn test:all --watchAll",
+    "yarn:install": "yarn install --no-lockfile"
   },
 
   "devDependencies": {
