@@ -3,20 +3,18 @@
   "workspaces": {
     "packages": ["packages/*"]
   },
-
   "scripts": {
     "test:all": "jest --forceExit --detectOpenHandles --runInBand",
     "test:watch": "yarn test:all --watchAll",
-    "yarn:install": "yarn install --no-lockfile"
+    "yarn:install": "yarn install --no-lockfile",
+    "lint:all": "eslint -c packages/utils-ts/.eslintrc.style.yml . --ext .ts",
+    "lint:all:fix": "yarn lint:all --fix"
   },
-
   "devDependencies": {
     "lerna": "3.20.2"
   },
   "husky": {
-    "hooks": {
-
-    }
+    "hooks": {}
   },
   "lint-staged": {
     "*.ts": [
