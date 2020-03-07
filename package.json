@@ -8,7 +8,8 @@
     "test:watch": "yarn test:all --watchAll",
     "yarn:install": "yarn install --no-lockfile",
     "lint:all": "eslint -c packages/utils-ts/.eslintrc.style.yml . --ext .ts",
-    "lint:all:fix": "yarn lint:all --fix"
+    "lint:all:fix": "yarn lint:all --fix",
+    "test:typecheck": "tsc --p packages/utils-ts/tsconfig.eslint.json --noEmit --incremental false"
   },
   "devDependencies": {
     "lerna": "3.20.2"
