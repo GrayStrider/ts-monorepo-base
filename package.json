@@ -4,7 +4,7 @@
     "packages": ["packages/*"]
   },
   "scripts": {
-    "test:all": "jest --forceExit --detectOpenHandles --runInBand",
+    "test:all": "jest --forceExit",
     "test:watch": "yarn test:all --watchAll",
     "yarn:install": "yarn install --no-lockfile",
     "lint:all": "eslint -c packages/utils-ts/.eslintrc.style.yml . --ext .ts",
