@@ -11,9 +11,7 @@
     "lint:all:fix": "yarn lint:all --fix",
     "test:typecheck": "tsc --p packages/utils-ts/tsconfig.eslint.json --noEmit --incremental false"
   },
-  "devDependencies": {
-    "lerna": "3.20.2"
-  },
+
   "husky": {
     "hooks": {}
   },
